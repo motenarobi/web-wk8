@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookHaven - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>BookHaven</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Discover Your Next Favorite Book</h2>
+    <p>Dive into stories that inspire, challenge, and captivate.</p>
+  </section>
+
+  <section class="featured-books">
+    <h3>Featured Books</h3>
+    <div class="book-grid">
+      <div class="book">
+        <img src="images/alchemist.jpeg" alt="Book 1">
+        <p><strong>The Alchemist</strong> – Paulo Coelho</p>
+      </div>
+      <div class="book">
+        <img src="images/atomic.jpg" alt="Book 2">
+        <p><strong>Atomic Habits</strong> – James Clear</p>
+      </div>
+      <div class="book">
+        <img src="images/1984.jpeg" alt="Book 3">
+        <p><strong>1984</strong> – George Orwell</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="book-categories">
+    <h3>Book Categories</h3>
+    <ul>
+      <li onclick="filterBooks('fiction')">Fiction</li>
+      <li onclick="filterBooks('non-fiction')">Non-Fiction</li>
+      <li onclick="filterBooks('science')">Science</li>
+      <li onclick="filterBooks('history')">History</li>
+      <li onclick="filterBooks('biography')">Biography</li>
+    </ul>
+  
+    <div id="books-list" class="book-grid">
+      <!-- Books will be dynamically added here based on category selection -->
+    </div>
+  </section>
+
+  <section class="book-of-the-week">
+    <h3>Book of the Week</h3>
+    <div class="book-highlight">
+      <img src="images/power.jpg" alt="Book of the Week">
+      <div>
+        <h4>“The Power of Now” – Eckhart Tolle</h4>
+        <p>This life-changing book teaches how to live fully in the present moment. A must-read for anyone seeking peace of mind.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reading-tips">
+    <h3>Quick Reading Tips</h3>
+    <ul>
+      <li>Always carry a book with you — even digitally!</li>
+      <li>Set daily reading goals (10-20 minutes).</li>
+      <li>Join a book club to stay motivated.</li>
+      <li>Use sticky notes to highlight powerful quotes.</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h3>Join Our Book Lovers Community</h3>
+    <p>Get personalized recommendations, reading challenges, and connect with fellow readers.</p>
+    <a href="contact.html" class="join-btn">Join Now</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BookHaven</p>
+  </footer>
+  <script>
+     const books = [
+    { title: 'The Great Gatsby', category: 'fiction', image: 'gatsby.jpeg' },
+    { title: 'Sapiens: A Brief History of Humankind', category: 'non-fiction', image: 'Sapiens-AUS.jpg' },
+    { title: 'Brief Answers to the Big Questions', category: 'non-fiction', image: 'big_.jpg' },
+    { title: 'The Selfish Gene', category: 'science', image: 'selfish-gene.jpg' },
+    { title: 'The Origin of Species', category: 'science', image: 'spicies_.jpg' },
+    { title: 'The Diary of a Young Girl', category: 'biography', image: 'the diary of a young girl.jpg' },
+    { title: 'The Story of Civilization', category: 'history', image: 'civilization.jpg' }
+  ];
+  
+  // Function to filter books based on category
+  function filterBooks(category) {
+    const booksList = document.getElementById('books-list');
+    booksList.innerHTML = ''; // Clear the previous books
+  
+    // Filter books by category
+    const filteredBooks = books.filter(book => book.category === category);
+  
+    // Display filtered books
+    filteredBooks.forEach(book => {
+      const bookElement = document.createElement('div');
+      bookElement.classList.add('book');
+      bookElement.innerHTML = `
+        <img src="images/${book.image}" alt="${book.title}">
+        <p>${book.title}</p>
+      `;
+      booksList.appendChild(bookElement);
+    });
+  
+    // If no books match the category, display a message
+    if (filteredBooks.length === 0) {
+      booksList.innerHTML = '<p>No books available in this category.</p>';
+    }
+  }
+  </script>
+</body>
+</html>

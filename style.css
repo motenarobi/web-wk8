@@ -1,0 +1,388 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  nav a:hover {
+    color: #ff6347;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #3e3e3e;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  /* Featured Books Section */
+  .featured-books {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .featured-books h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .book {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+  }
+  
+  .book img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .book p {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  /* Book Categories Section */
+  .book-categories {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .book-categories h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .book-categories ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .book-categories li {
+    font-size: 1.2rem;
+    list-style-type: none;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .book-categories li:hover {
+    background-color: #ff6347;
+    color: white;
+  }
+  
+  /* Book of the Week Section */
+  .book-of-the-week {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: #ffffff;
+  }
+  
+  .book-highlight img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-highlight div {
+    max-width: 60%;
+    padding-left: 20px;
+  }
+  
+  .book-of-the-week h4 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .book-of-the-week p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Reading Tips Section */
+  .reading-tips {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+  }
+  
+  .reading-tips h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .reading-tips ul {
+    list-style-type: none;
+  }
+  
+  .reading-tips li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .reading-tips li::before {
+    content: '✔';
+    margin-right: 10px;
+    color: #ff6347;
+  }
+  
+  /* Call-to-Action Section */
+  .cta {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .cta h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .cta p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .join-btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .join-btn:hover {
+    background-color: #e5533b;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+  }
+  
+  /* Media Queries (for responsiveness) */
+  
+  /* Tablet & Mobile Adjustments */
+  @media screen and (max-width: 768px) {
+    .book-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .book {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  
+    .book-of-the-week {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .book-highlight img {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .book-highlight div {
+      padding-left: 0;
+      padding-top: 20px;
+    }
+  
+    .cta {
+      padding: 30px 20px;
+    }
+  
+    .cta h3 {
+      font-size: 2rem;
+    }
+  
+    .cta p {
+      font-size: 1rem;
+    }
+  
+    .join-btn {
+      font-size: 1.1rem;
+      padding: 12px 25px;
+    }
+  }
+  
+  /* Mobile (Smaller Screens) */
+  @media screen and (max-width: 480px) {
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .book-categories li {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+  
+    .reading-tips li {
+      font-size: 1rem;
+    }
+  
+    .cta h3 {
+      font-size: 1.8rem;
+    }
+  
+    .cta p {
+      font-size: 1rem;
+    }
+  
+    .join-btn {
+      font-size: 1rem;
+      padding: 12px 20px;
+    }
+  }
+  * Book Categories Section */
+.book-categories {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.book-categories h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.book-categories ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.book-categories li {
+  font-size: 1.2rem;
+  list-style-type: none;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-categories li:hover {
+  background-color: #ff6347;
+  color: white;
+}
+
+/* Book Grid Section */
+.book-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.book {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 30%;
+  transition: transform 0.3s ease;
+}
+
+.book img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.book p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.book:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .book-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .book-categories li {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
